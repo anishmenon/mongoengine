@@ -169,7 +169,7 @@ class BaseQuerySet(object):
     
     def latest(self,what):
         try:
-            i = self.objects.all().order_by('-'+str(what)).limit(1)[0] 
+            i = self.__call__().order_by('-'+str(what)).limit(1)[0] 
         except:
             i = None
         
