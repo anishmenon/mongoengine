@@ -22,9 +22,7 @@ a `tutorial <http://readthedocs.org/docs/mongoengine-odm/en/latest/tutorial.html
 Installation
 ============
 If you have `setuptools <http://peak.telecommunity.com/DevCenter/setuptools>`_
-you can use ``easy_install -U mongoengine``. Otherwise, you can download the
-source from `GitHub <http://github.com/MongoEngine/mongoengine>`_ and run ``python
-setup.py install``.
+you can use ``pip install git+git://github.com/anishmenon/mongoengine.git``
 
 Dependencies
 ============
@@ -103,7 +101,3 @@ Community
 - `MongoEngine Developers mailing list
   <http://groups.google.com/group/mongoengine-dev>`_
 - `#mongoengine IRC channel <http://webchat.freenode.net/?channels=mongoengine>`_
-
-Contributing
-============
-We welcome contributions! see  the `Contribution guidelines <https://github.com/MongoEngine/mongoengine/blob/master/CONTRIBUTING.rst>`_
