@@ -51,12 +51,18 @@ Some simple examples of what MongoEngine code looks like::
     >>> post1 = TextPost(title='Using MongoEngine', content='See the tutorial')
     >>> post1.tags = ['mongodb', 'mongoengine']
     >>> post1.save()
+    
 
     # Create a link-based post
     >>> post2 = LinkPost(title='MongoEngine Docs', url='hmarr.com/mongoengine')
     >>> post2.tags = ['mongoengine', 'documentation']
     >>> post2.save()
+    
+    >> TextPost.objects.latest('id') # This one will return the latest TextPost instance by id
+    >> TextPost.objects.latest('posted') # This one will return the latest TextPost instance by Date
 
+    
+    
     # Iterate over all posts using the BlogPost superclass
     >>> for post in BlogPost.objects:
     ...     print '===', post.title, '==='
@@ -79,11 +85,17 @@ Some simple examples of what MongoEngine code looks like::
     2
     >>> len(BlogPost.objects(tags='mongodb'))
     1
+    
 
 Tests
 =====
 To run the test suite, ensure you are running a local instance of MongoDB on
 the standard port, and run: ``python setup.py test``.
+
+
+
+
+
 
 Community
 =========
