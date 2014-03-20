@@ -164,7 +164,18 @@ class BaseQuerySet(object):
         """An alias of :meth:`~mongoengine.queryset.QuerySet.__call__`
         """
         return self.__call__(*q_objs, **query)
-
+    
+    
+    
+    def latest(self,what):
+        try:
+            i = self.objects.all().order_by('-'+str(what)).limit(1)[0] 
+        except:
+            i = None
+        
+        return i
+    
+    
     def get(self, *q_objs, **query):
         """Retrieve the the matching object raising
         :class:`~mongoengine.queryset.MultipleObjectsReturned` or
